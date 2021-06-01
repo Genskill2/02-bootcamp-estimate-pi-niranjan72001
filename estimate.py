@@ -30,16 +30,16 @@ class TestMC(unittest.TestCase):
     
 if __name__ == "__main__":
     unittest.main()
-def wallis():
-	n=input("enter the number of iterations to be done")
+def wallis(n):
+	
 	y=1
 	for i in range(1,int(n)+1):
 		y=y*(4*i*i/(4*i*i-1))
-	print(f"the value of pi is{2*y}")
-def monte_carlo():
+	return(2*y)
+def monte_carlo(n):
 	import random as ra
 	z,u=0,0
-	n=input("enter the number of iterations to be done")
+	
 	for i in range(1,int(n)+1):
 		x=ra.random()
 		y=ra.random()
@@ -47,5 +47,5 @@ def monte_carlo():
 			 z+=1
 		else:
 		 	 u+=1
-	print(f"the value of pi is{4*(z/(z+u))}")
+	return(4*(z/(z+u))
 	
